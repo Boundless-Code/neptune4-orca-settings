@@ -24,9 +24,9 @@
 
 ## Retraction Settings
 ### Current Settings
-- Length: 5mm (Note: Should be reduced for direct drive)
-- Retraction Speed: 60mm/s
-- Deretraction Speed: 45mm/s
+- Length: 0.8mm
+- Retraction Speed: 35mm/s
+- Deretraction Speed: 35mm/s
 - Z Hop When Retracting: 0.4mm
 - Travel Distance Threshold: 1mm
 - Wipe Distance: 1mm
@@ -34,11 +34,10 @@
 - Retract on Layer Change: Enabled
 - Wipe While Retracting: Enabled
 
-### Recommended Settings
-- Length: 0.8-1.0mm
-- Retraction Speed: 35-40mm/s
-- Deretraction Speed: Match retraction speed
-- Travel Distance Threshold: 1.5mm
+### Previous Settings (For Reference)
+- Length: 5mm
+- Retraction Speed: 60mm/s
+- Deretraction Speed: 45mm/s
 
 ## Speed Settings
 - First Layer: 50mm/s
@@ -80,18 +79,13 @@
 - Pressure Advance: 0.02 (disabled)
 - Diameter: 1.75mm
 
-## Recommended Improvements
+## Future Improvements to Consider
 
-1. Retraction Settings Adjustment:
-   - Reduce Length to 0.8-1.0mm (current 5mm is too high for direct drive)
-   - Lower Retraction Speed to 35-40mm/s
-   - Match Deretraction Speed to Retraction Speed
-
-2. Temperature Adjustments:
+1. Temperature Adjustments:
    - Consider reducing to:
      - First Layer: 205°C
      - Other Layers: 200°C
 
-3. Pressure Advance:
+2. Pressure Advance:
    - Enable the setting
    - Start with 0.025 and tune from there

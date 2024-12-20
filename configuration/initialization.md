@@ -3,40 +3,37 @@
 ## Startup Sequence
 1. Load system_prompt.md
 2. Verify repository access
-3. Check required files:
+3. Load trigger_system.md for end-chat handling
+4. Check required files:
    - neptune4_settings.md
    - chat_context.md
    - github_instructions.md
-4. Perform initial Brave search
-5. Load current context and settings
+5. Perform initial Brave search
+6. Load current context and settings
 
-## Automatic Updates
-- EVERY response must check if settings changed
-- If settings changed, update neptune4_settings.md
-- At chat end, MUST update chat_context.md
-- Before chat end, MUST run end-of-chat checklist
+## End Chat Processing
+When trigger phrase detected:
+1. Execute Full Review:
+   - Review all chat messages
+   - Review system instructions
+   - Extract key patterns and learnings
 
-## End of Chat Detection
-Watch for these signals:
-1. User indicates end of session
-2. User starts new topic
-3. Long period of inactivity
-4. "Summarize this chat" request
+2. Generate Updates:
+   - Create comprehensive chat summary
+   - Document new practices or solutions
+   - Update all relevant configurations
 
-When detected:
-1. Run Pre-End Chat Checklist from github_management.md
-2. Create summary using standard format
-3. Push all updates
-4. Verify successful commits
+3. Update GitHub:
+   - Push all changes with clear commit messages
+   - Verify successful commits
+   - Report update status
 
-## File Creation Rules
-If any required file is missing:
-1. Use template from templates.md
-2. Initialize with base configuration
-3. Document creation in commit message
+4. Provide Next Chat Setup:
+   - Output complete system prompt
+   - Include any new learnings or patterns
 
-## Context Management
-- Update chat_context.md at end of each session
-- Maintain continuous history
-- Track all setting changes
+## File Management
+- Update chat_context.md with complete history
+- Update settings immediately when changed
 - Document all troubleshooting steps
+- Maintain accurate configuration state

@@ -1,53 +1,74 @@
 # Initialization and Update Procedures
 
-## Startup Sequence
-1. Try loading system_prompt.md
-   - If failed, execute error recovery
-2. Verify repository access
-   - If failed, attempt reconnection
-   - If still failed, use error recovery
-3. Load trigger_system.md for end-chat handling
-4. Check required files:
+## Bootstrap Verification
+1. Verify repository access
+2. Verify system_prompt.md load
+   ```json
+   {
+     "sequence": [
+       {"file": "system_prompt.md", "required": true},
+       {"file": "configuration/initialization.md", "required": true},
+       {"file": "configuration/error_recovery.md", "required": true}
+     ]
+   }
+   ```
+
+## File Load Sequence
+1. Primary Load:
+   - system_prompt.md → MUST succeed
+   - If fails, use error_recovery.md template
+
+2. Secondary Load:
+   - configuration/*.md files
+   - Verify each file hash
+   - Log load status
+
+3. Data Load:
    - neptune4_settings.md
    - chat_context.md
-   - github_instructions.md
-   - If any missing, execute error recovery
-5. Perform initial Brave search
-6. Load current context and settings
+   - Verify data integrity
 
-## Error Handling
-1. For any file access error:
-   - Check error_recovery.md
-   - Follow recovery procedures
-   - Log all actions
-2. For GitHub connection issues:
-   - Attempt reconnection
-   - Use local cache if available
-   - Follow recovery procedures
+## Load Verification
+For each file:
+1. Check file exists
+2. Verify file hash
+3. Validate content structure
+4. Log load status
+5. Confirm successful load
 
-## End Chat Processing
-When trigger phrase detected:
-1. Execute Full Review:
-   - Review all chat messages
-   - Review system instructions
-   - Extract key patterns and learnings
+## Startup Sequence
+1. Execute bootstrap verification
+2. Complete file load sequence
+3. Verify all critical files
+4. Load trigger system
+5. Initialize search system
+6. Verify ready state
 
-2. Generate Updates:
-   - Create comprehensive chat summary
-   - Document new practices or solutions
-   - Update all relevant configurations
+## Error States
+1. Critical Error:
+   - system_prompt.md missing/corrupt
+   - initialization.md missing/corrupt
+   - error_recovery.md missing/corrupt
 
-3. Update GitHub:
-   - Push all changes with clear commit messages
-   - Verify successful commits
-   - Report update status
+2. Non-Critical Error:
+   - Configuration file missing
+   - Data file corrupt
+   - Search system failure
 
-4. Provide Next Chat Setup:
-   - Output complete system prompt
-   - Include any new learnings or patterns
+## Recovery Actions
+1. Critical Error:
+   - Use embedded templates
+   - Rebuild system files
+   - Verify recovery
 
-## File Management
-- Update chat_context.md with complete history
-- Update settings immediately when changed
-- Document all troubleshooting steps
-- Maintain accurate configuration state
+2. Non-Critical Error:
+   - Use cached data
+   - Rebuild from templates
+   - Continue with warnings
+
+## Initialization Complete When:
+1. All critical files verified
+2. System prompt loaded
+3. Configuration active
+4. Search system ready
+5. Git connection verified

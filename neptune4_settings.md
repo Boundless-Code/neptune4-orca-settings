@@ -1,5 +1,13 @@
 # Elegoo Neptune 4 OrcaSlicer Settings
 
+## Repository Management
+This repository maintains Neptune 4 printer settings and calibration progress. For updates:
+- Always include complete file content, no truncation
+- Document both current and previous settings for reference
+- Use clear, descriptive commit messages
+- Branch: main
+- Key file: neptune4_settings.md
+
 ## Hardware Configuration
 - Printer: Elegoo Neptune 4 with 0.4mm nozzle
 - Firmware: Klipper v1.1.3.2
@@ -100,3 +108,10 @@
 - Z-offset calibrated for proper first layer adhesion
 - E-steps verified accurate at factory settings
 - Initial temperature testing indicates need for flow calibration before further tuning
+
+## Session Management
+For new troubleshooting sessions:
+1. Reference hardware status from this document
+2. Update settings and progress after each session
+3. Document both successful and unsuccessful attempts
+4. Keep clear chronological progress notes

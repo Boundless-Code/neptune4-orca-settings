@@ -26,8 +26,15 @@ Chat #3 - E-steps and initial temperature testing
 - First temperature tower attempt (failed - too brittle)
 - Identified need for flow calibration
 
-Chat #4 (Next Session)
-- Planned: Flow calibration
+Chat #4 - Flow Calibration
+- Completed flow calibration using OrcaSlicer test
+- Determined optimal flow ratio of 0.97 (-3% adjustment)
+- Identified small feature quality issues
+- Planning cooling configuration tests
+
+Chat #5 (Next Session)
+- Planned: Cooling configuration testing
+- Options: No fan vs constant low-speed cooling
 - Pending: Temperature calibration
 - Future: Pressure advance setup
 
@@ -107,18 +114,20 @@ Chat #4 (Next Session)
 
 ## Material Settings
 - Type: Generic PLA
-- Flow Ratio: 0.98 (needs calibration)
+- Flow Ratio: 0.97 (calibrated)
 - Pressure Advance: 0.02 (disabled)
 - Diameter: 1.75mm
+- Part Cooling Fan: 50% max (investigating settings)
 
 ## Next Steps for Calibration
 
-1. Flow Calibration:
-   - Primary focus before temperature tuning
-   - Current prints show signs of under-extrusion
-
+1. Cooling Configuration:
+   - Test Option 1: No part cooling fan
+   - Test Option 2: Constant 30% fan speed
+   - Focus on small feature quality improvement
+   
 2. Temperature Calibration:
-   - Run temperature tower after flow calibration
+   - Run temperature tower after cooling is optimized
    - Previous attempt showed brittle layers
    - Target range: 190°C - 220°C
 
@@ -127,10 +136,14 @@ Chat #4 (Next Session)
    - Start with 0.025 and tune from there
 
 ## Recent Progress
-- Completed bed leveling with excellent results
-- Z-offset calibrated for proper first layer adhesion
-- E-steps verified accurate at factory settings
-- Initial temperature testing indicates need for flow calibration before further tuning
+- Completed flow calibration with 0.97 ratio (-3% adjustment)
+- Main surfaces printing perfectly at new flow rate
+- Identified small feature quality issues
+- Planning cooling configuration tests
+- Previous calibrations remain solid:
+  - Bed leveling with excellent flatness
+  - Z-offset calibrated for proper first layer adhesion
+  - E-steps verified accurate at factory settings
 
 ## Session Management
 For new troubleshooting sessions:

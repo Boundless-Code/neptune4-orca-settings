@@ -7,6 +7,11 @@
 - Z-offset: Calibrated via paper method
 - WebUI: 10.42.70.42
 
+## Recent Mechanical Fixes
+- Tightened extruder wheels that were loose
+- Tightened loose belt
+- Performed new auto-level after mechanical adjustments
+
 ## Print Settings
 - Flow Rate: 0.965 (-3% modifier)
 - Part Cooling: 50% max, intermittent
@@ -14,18 +19,23 @@
   - First Layer: 210°C
   - Main Layers: 205°C
 
-## Known Issues
-- Small feature quality needs improvement
-- Part cooling configuration under testing
+## Previous Issues
+- Small feature quality needed improvement
+- Layer inconsistency in cube test prints
+- Initial diagnosis focused on cooling and tension
+- Root cause identified as mechanical: loose wheels and belt
 
-## Recent Findings from Research
-- Printer known for high-speed capability but requires tuning
-- Part cooling is critical for small feature quality
-- Firmware maturity is still developing
+## Current Status
+- Mechanical issues addressed
+- New auto-level completed
+- Test cube printing to verify improvements
 
 ## Next Steps
-1. Test cooling configurations:
-   - Option A: Disable part cooling
-   - Option B: Constant 30% cooling
-2. Monitor small feature quality
-3. Document results
+1. Verify print quality improvements with test cube
+2. Monitor mechanical components for any loosening
+3. Document results of fixes
+
+## Maintenance Notes
+- Regular check of wheel tightness recommended
+- Belt tension should be monitored
+- Auto-level after any mechanical adjustments

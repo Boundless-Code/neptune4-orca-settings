@@ -4,8 +4,9 @@
 - Printer: Elegoo Neptune 4 with 0.4mm nozzle
 - Firmware: Klipper v1.1.3.2
 - Screen Firmware: v1.2.14
-- Bed Leveling: Completed with ±0.05mm variance
+- Bed Leveling: Completed with excellent flatness
 - WebUI IP: 10.42.70.42
+- E-steps: Verified accurate at factory settings
 
 ## Basic Machine Settings
 - Printable Height: 265mm
@@ -75,17 +76,27 @@
 
 ## Material Settings
 - Type: Generic PLA
-- Flow Ratio: 0.98
+- Flow Ratio: 0.98 (needs calibration)
 - Pressure Advance: 0.02 (disabled)
 - Diameter: 1.75mm
 
-## Future Improvements to Consider
+## Next Steps for Calibration
 
-1. Temperature Adjustments:
-   - Consider reducing to:
-     - First Layer: 205°C
-     - Other Layers: 200°C
+1. Flow Calibration:
+   - Primary focus before temperature tuning
+   - Current prints show signs of under-extrusion
 
-2. Pressure Advance:
-   - Enable the setting
+2. Temperature Calibration:
+   - Run temperature tower after flow calibration
+   - Previous attempt showed brittle layers
+   - Target range: 190°C - 220°C
+
+3. Pressure Advance:
+   - Enable after flow and temperature are dialed in
    - Start with 0.025 and tune from there
+
+## Recent Progress
+- Completed bed leveling with excellent results
+- Z-offset calibrated for proper first layer adhesion
+- E-steps verified accurate at factory settings
+- Initial temperature testing indicates need for flow calibration before further tuning

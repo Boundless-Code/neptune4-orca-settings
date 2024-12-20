@@ -8,6 +8,29 @@ This repository maintains Neptune 4 printer settings and calibration progress. F
 - Branch: main
 - Key file: neptune4_settings.md
 
+## Calibration Chat History
+Chronological record of setup and calibration sessions:
+
+Chat #1 - Initial setup and verification
+- Basic printer setup
+- Firmware verification
+- Initial settings configuration
+
+Chat #2 - Bed leveling and Z-offset calibration
+- Manual bed leveling adjustments
+- Z-offset calibration
+- First layer tests
+
+Chat #3 - E-steps and initial temperature testing
+- E-steps verification (confirmed factory settings)
+- First temperature tower attempt (failed - too brittle)
+- Identified need for flow calibration
+
+Chat #4 (Next Session)
+- Planned: Flow calibration
+- Pending: Temperature calibration
+- Future: Pressure advance setup
+
 ## Hardware Configuration
 - Printer: Elegoo Neptune 4 with 0.4mm nozzle
 - Firmware: Klipper v1.1.3.2

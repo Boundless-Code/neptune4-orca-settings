@@ -1,74 +1,40 @@
 # Initialization and Update Procedures
 
-## Bootstrap Verification
-1. Verify repository access
-2. Verify system_prompt.md load
-   ```json
-   {
-     "sequence": [
-       {"file": "system_prompt.md", "required": true},
-       {"file": "configuration/initialization.md", "required": true},
-       {"file": "configuration/error_recovery.md", "required": true}
-     ]
-   }
-   ```
-
-## File Load Sequence
-1. Primary Load:
-   - system_prompt.md → MUST succeed
-   - If fails, use error_recovery.md template
-
-2. Secondary Load:
-   - configuration/*.md files
-   - Verify each file hash
-   - Log load status
-
-3. Data Load:
+## Startup Sequence
+1. Load system_prompt.md
+2. Verify repository access
+3. Load trigger_system.md for end-chat handling
+4. Check required files:
    - neptune4_settings.md
    - chat_context.md
-   - Verify data integrity
+5. Perform initial Brave search
+6. Load current context and settings
 
-## Load Verification
-For each file:
-1. Check file exists
-2. Verify file hash
-3. Validate content structure
-4. Log load status
-5. Confirm successful load
+## File Verification
+1. Check file integrity
+2. Validate content structure
+3. Verify access permissions
 
-## Startup Sequence
-1. Execute bootstrap verification
-2. Complete file load sequence
-3. Verify all critical files
-4. Load trigger system
-5. Initialize search system
-6. Verify ready state
+## Error Handling
+1. For any file access error:
+   - Check error_recovery.md
+   - Follow recovery procedures
+   - Log all actions
+2. For GitHub connection issues:
+   - Attempt reconnection
+   - Use local cache if available
+   - Follow recovery procedures
 
-## Error States
-1. Critical Error:
-   - system_prompt.md missing/corrupt
-   - initialization.md missing/corrupt
-   - error_recovery.md missing/corrupt
+## Update Process
+1. Stage changes
+2. Verify content
+3. Commit with validation
+4. Verify success
 
-2. Non-Critical Error:
-   - Configuration file missing
-   - Data file corrupt
-   - Search system failure
-
-## Recovery Actions
-1. Critical Error:
-   - Use embedded templates
-   - Rebuild system files
-   - Verify recovery
-
-2. Non-Critical Error:
-   - Use cached data
-   - Rebuild from templates
-   - Continue with warnings
-
-## Initialization Complete When:
-1. All critical files verified
-2. System prompt loaded
-3. Configuration active
-4. Search system ready
-5. Git connection verified
+## End Chat Process
+When trigger detected:
+1. Review chat contents
+2. Update settings if changed
+3. Update chat context
+4. Verify all updates
+5. Output status and next prompt

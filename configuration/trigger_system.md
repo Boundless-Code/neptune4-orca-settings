@@ -1,37 +1,27 @@
-# Chat Trigger System
+# Chat Control System
 
-## End Chat Trigger Phrases
+## Trigger Phrases
 - "end chat"
 - "finish chat"
 - "complete chat"
 
-## Trigger Response Sequence
+## End Chat Sequence
+1. Review chat history
+2. Document all changes
+3. Update repository
+4. Verify updates
+5. Output:
+   - Update status
+   - Next chat prompt
 
-### 1. Full Review
-- Review all chat messages
-- Review system instructions
-- Review current GitHub state
-- Extract key learnings and patterns
+## Review Process
+1. Analyze all messages
+2. Extract key changes
+3. Update documentation
+4. Save context
 
-### 2. Update Guidelines
-- Identify successful approaches
-- Note areas for improvement
-- Document new troubleshooting patterns
-- Update best practices
-
-### 3. GitHub Update Sequence
-- Update chat_context.md with full session
-- Update neptune4_settings.md with latest state
-- Update any templates if patterns emerged
-- Add new learnings to relevant files
-
-### 4. Output Format
-```
-GITHUB UPDATE STATUS:
-[List of files updated]
-[Status of each update]
-[Any warnings or notes]
-
-SYSTEM PROMPT FOR NEXT CHAT:
-[Complete system prompt]
-```
+## Update Verification
+1. Check all changes
+2. Verify file states
+3. Confirm commits
+4. Log results

@@ -28,9 +28,15 @@
    - Adjusted belt tension
    - New auto-level performed
 
+5. First Layer Optimization
+   - Increased first layer temperature to 215°C
+   - Reduced first layer speed to 15mm/s
+   - Disabled first layer cooling
+   - Set first layer height to 0.3mm
+
 ## Current Testing
-- Test cube printing to verify improvements
-- Monitoring small feature quality
+- Testing first layer adhesion improvements
+- Monitoring mechanical stability
 
 ## Maintenance Schedule
 - Regular check of wheel tightness

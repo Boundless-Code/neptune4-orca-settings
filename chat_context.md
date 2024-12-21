@@ -10,12 +10,15 @@
 1. Initial Setup
    - Bed leveling completed (±0.05mm variance)
    - Z-offset calibrated (paper method)
-   - E-steps verified at factory settings
+   - E-steps verified at 400 steps/mm (factory default)
+   - E-steps verification process documented
 
 2. Flow Calibration
    - Best result: -3% modifier
    - New flow rate: 0.965
+   - Calibration method: Single-wall cube test
    - Main surfaces printing well
+   - Process documented for future reference
 
 3. Issue Identification
    - Small features (label tabs) showing poor quality
@@ -37,11 +40,14 @@
 ## Current Testing
 - Testing first layer adhesion improvements
 - Monitoring mechanical stability
+- Documenting calibration processes
 
 ## Maintenance Schedule
 - Regular check of wheel tightness
 - Belt tension monitoring
 - Auto-level after mechanical adjustments
+- E-steps verification after extruder maintenance
+- Flow calibration check with new filament
 
 ## Repository Information
 - Owner: Boundless-Code

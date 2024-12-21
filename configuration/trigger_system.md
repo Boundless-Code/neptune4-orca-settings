@@ -12,7 +12,7 @@
 4. Verify updates
 5. Output:
    - Update status
-   - Next chat prompt
+   - Next chat prompt (from prompt_template.md)
 
 ## Review Process
 1. Analyze all messages
@@ -25,3 +25,8 @@
 2. Verify file states
 3. Confirm commits
 4. Log results
+
+## Next Chat Preparation
+1. Load prompt_template.md
+2. Verify template is current
+3. Provide complete template content

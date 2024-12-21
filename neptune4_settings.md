@@ -7,6 +7,28 @@
 - Z-offset: Calibrated via paper method
 - WebUI: 10.42.70.42
 
+## Calibration Status
+### E-steps Calibration
+- Base E-steps: 400 steps/mm (factory default)
+- Verification Method: 100mm extrusion test
+- Temperature: 200°C for testing
+- Process:
+  1. Mark filament at 120mm
+  2. Extrude 100mm
+  3. Measure remaining distance
+  4. Calculate new value if needed
+
+### Flow Rate Calibration
+- Current Flow Rate: 0.965 (-3% modifier)
+- Calibration Method: Single-wall cube test
+- Wall Thickness Target: Match nozzle size
+- Process:
+  1. Print 20mm calibration cube, no top
+  2. Vase mode (single wall)
+  3. Measure all four walls
+  4. Average measurements
+  5. Adjust flow rate = (Expected/Measured) * Current
+
 ## Recent Mechanical Fixes
 - Tightened extruder wheels that were loose
 - Tightened loose belt
@@ -45,3 +67,5 @@
 - Regular check of wheel tightness recommended
 - Belt tension should be monitored
 - Auto-level after any mechanical adjustments
+- Verify E-steps after any extruder maintenance
+- Check flow calibration when changing filaments

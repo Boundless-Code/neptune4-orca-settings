@@ -7,6 +7,7 @@
 4. Check required files:
    - neptune4_settings.md
    - chat_context.md
+   - prompt_template.md
 5. Perform initial Brave search
 6. Load current context and settings
 
@@ -38,3 +39,4 @@ When trigger detected:
 3. Update chat context
 4. Verify all updates
 5. Output status and next prompt
+6. Provide prompt_template.md contents for next chat

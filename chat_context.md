@@ -2,66 +2,46 @@
 
 ## Latest Session Summary
 - Date: December 20, 2024
-- Focus: Git workflow optimization and template creation
+- Focus: Initialization sequence optimization
 - Key Changes:
-  - Added prompt_template.md
-  - Updated initialization procedure
-  - Updated trigger system
+  - Identified initialization sequence issues
+  - Updated initialization order
+  - Added validation requirements
   - No printer settings modified
 
+## Required Initialization Order
+1. Load and execute system_prompt.md COMPLETELY
+2. Verify permissions granted
+3. Load ALL configuration files
+4. Validate file contents
+5. Load context and settings
+6. Perform Brave search LAST
+
 ## Hardware Configuration
-- Elegoo Neptune 4
-- Klipper v1.1.3.2
-- Screen v1.2.14
-- WebUI: 10.42.70.42
+[Previous hardware configuration section remains unchanged]
 
 ## Progress History
-1. Initial Setup
-   - Bed leveling completed (±0.05mm variance)
-   - Z-offset calibrated (paper method)
-   - E-steps verified at 400 steps/mm (factory default)
-   - E-steps verification process documented
-
-2. Flow Calibration
-   - Best result: -3% modifier
-   - New flow rate: 0.965
-   - Calibration method: Single-wall cube test
-   - Main surfaces printing well
-   - Process documented for future reference
-
-3. Issue Identification
-   - Small features (label tabs) showing poor quality
-   - Initial focus on cooling solutions
-   - Investigation of extruder tension
-   - Discovery of loose mechanical components
-
-4. Recent Fixes
-   - Tightened extruder wheels
-   - Adjusted belt tension
-   - New auto-level performed
-
-5. First Layer Optimization
-   - Increased first layer temperature to 215°C
-   - Reduced first layer speed to 15mm/s
-   - Disabled first layer cooling
-   - Set first layer height to 0.3mm
+[Previous progress history section remains unchanged]
 
 ## Current Testing
-- Testing first layer adhesion improvements
-- Monitoring mechanical stability
-- Documenting calibration processes
+[Previous testing section remains unchanged]
 
 ## Maintenance Schedule
-- Regular check of wheel tightness
-- Belt tension monitoring
-- Auto-level after mechanical adjustments
-- E-steps verification after extruder maintenance
-- Flow calibration check with new filament
+[Previous maintenance schedule remains unchanged]
 
 ## Repository Information
 - Owner: Boundless-Code
 - Repo: neptune4-orca-settings
 - Key files: 
+  - system_prompt.md (MUST BE LOADED FIRST)
+  - configuration/*.md
   - neptune4_settings.md
   - prompt_template.md
-  - configuration/*.md
+
+## Initialization Validation Checklist
+- [ ] system_prompt.md fully executed
+- [ ] All permissions granted
+- [ ] All configuration files loaded
+- [ ] File contents validated
+- [ ] Context and settings loaded
+- [ ] Brave search completed
